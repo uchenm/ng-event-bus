@@ -17,7 +17,7 @@
 
     this.emit = function(name) {
 
-      var args = arguments.slice(1);
+      var args = Array.prototype.slice.call(arguments, 1);
 
       if (listeners.hasOwnProperty(name)) {
         listeners[name].apply(this, args);
@@ -42,7 +42,8 @@
       if (pendingEvents.hasOwnProperty(name)) {
         while (pendingEvents[name].length) {
           var args = pendingEvents[name].shift();
-          this.emit.apply(this, name, args);
+          args.unshift(name);
+          this.emit.apply(this, args);
         }
         // clear cache
         delete pendingEvents[name];
