@@ -10,7 +10,7 @@ Nothing special event bus for Angular
 
 ## Usage
 
-`angular.module('myApp', ['ngEventBus'])` then an `EventBus` service will be available for your app
+`angular.module('myApp', ['ngEventBus'])` then an `EventBus` service will be available for dependency injection in your app
 
 ## API
 
