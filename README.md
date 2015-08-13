@@ -2,6 +2,8 @@
 
 Nothing special event bus for Angular
 
+> will still work even if broadcast comes first than listener
+
 ## Install
 
 `bower install ng-event-bus --save`
