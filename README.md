@@ -18,4 +18,4 @@ Nothing special event bus for Angular
 
 `EventBus.emit(channel, [arguments])`
 
-`EventBus.broadcast(channel, [arguments])` is api-equivalent to `emit`
+`EventBus.broadcast` is api-equivalent to `emit`
